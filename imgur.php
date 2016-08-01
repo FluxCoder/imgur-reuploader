@@ -1,11 +1,28 @@
 <?php
+/*
+
+Imgur Reuploader Script
+
+Created by FluxCoder
+
+*/
 $img = "null";
 
 function download($url){
   global $img;
   $temp = rand();
   $img    = 'temp-'.$temp.'.png';
-  $file   = file($url);
+  
+  $info = pathinfo($url);
+  
+  $allowed_types = array("gif","png","jpg");
+  
+  if(in_array($info['extension'], $allowed_types)){
+    $file   = file($url);
+  } else {
+    exit("Please make sure that the file is an image, press the back button and try again.");
+  }
+
   $result = file_put_contents("temp/".$img, $file);
 }
 function upload($img){
@@ -67,7 +84,7 @@ if(isset($_POST["url"])){
           <ul class="nav navbar-nav">
             <li class="active"><a href="">Home</a></li>
             <li><a href="?api">Tiny API</a></li>
-            <li><a href="">Download Script</a></li>
+            <li><a href="https://github.com/FluxCoder/imgur-reuploader">Download Script</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
