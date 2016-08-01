@@ -11,7 +11,7 @@ $img = "null";
 function download($url){
   global $img;
   $temp = rand();
-  $img    = 'temp-'.$temp.'.png';
+  $img    = 'temp-'.$temp.'';
   
   $info = pathinfo($url);
   
