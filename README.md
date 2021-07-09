@@ -1,3 +1,6 @@
+
+> :warning: **This project is very old & does not reflect current skills**
+> 
 # PHP Imgur Image Reuploader
 
 This PHP Script is a basic reuploader, here is what it does:
