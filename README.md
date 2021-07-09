@@ -1,5 +1,5 @@
 
-> :warning: **This project is very old & does not reflect current skills**
+> :warning: **This project is very old** - It does not reflect my current skills, and it not maintained.
 > 
 # PHP Imgur Image Reuploader
 
